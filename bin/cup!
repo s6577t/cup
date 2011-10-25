@@ -1,0 +1,8 @@
+args=$*
+
+if [ ! $* ] 
+  then
+  args=( "test/*.vows.js" )
+fi
+
+vows $args --spec

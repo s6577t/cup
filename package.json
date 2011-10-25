@@ -1,9 +1,17 @@
 {
-    "name": "cup"
-  , "version": "0.0.9"
-  , "private": true
-  , "dependencies": {
-      "express": "2.4.7"
-    , "jade": ">= 0.0.1"
+  "name": "cup", 
+  "version": "0.0.9",
+  "private": true,
+  "main": "./lib/cup.js",
+  "dependencies": {
+    "express": "2.4.7",
+    "jade": ">= 0.0.1",
+    "uglify-js": ">= 1.1.1"
+  },
+  "devDependencies": {
+    "vows": ">= 0.5.12"
+  },
+  "bin": {
+    "cup": "./bin/cli"
   }
 }

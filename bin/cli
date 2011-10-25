@@ -1,0 +1,31 @@
+#! /usr/bin/env node
+
+var commandName = process.argv[2];
+
+if (!commandName) {
+  commandName = 'help';
+}
+
+var commands = require('../lib/commands');
+
+var command = commands[commandName];
+
+if (!command) {
+  console.error("'" + command + "' is not a valid command.");
+  command = commands['help'];
+}
+
+var args = process.argv.slice(3);
+
+command.apply(commands, args);
+
+
+
+// if the arguments aren't valid, ERROR!
+
+//console.info("cup cli -> server start;");
+
+//var server = require('../lib/cup').cli.server();
+
+//server.listen(3000);
+//console.log("Express server listening on port %d in %s mode", server.address().port, server.settings.env);;
