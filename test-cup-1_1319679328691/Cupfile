@@ -1,0 +1,5 @@
+{
+  name: 'test cup',
+  version: '0.0.1',
+  licence: 'licence.txt'
+}

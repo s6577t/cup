@@ -1,8 +1,9 @@
-args=$*
+# run vows with preferred defaults.
+# runs all vows unless I specify otherwise by passing arguments to this script
 
-if [ ! $* ] 
-  then
-  args=( "test/*.vows.js" )
+if [ "$#" = "0" ]
+then
+  vows `find test -name *.vows.js` --spec
+else
+  vows $* --spec
 fi
-
-vows $args --spec
