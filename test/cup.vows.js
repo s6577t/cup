@@ -1,8 +1,9 @@
-var Cup = require('../'),
-    vows = require('vows'),
+var Cup    = require('../'),
+    vows   = require('vows'),
     assert = require('assert'),
     macros = require('./support/macros'),
-    path = require('path');
+    path   = require('path');
+
 
 function isParsedAs (expectedValue) {
 
@@ -20,14 +21,19 @@ function isParsedAs (expectedValue) {
   return context;
 }
 
+macros.removeTestCupsOnExit();
+
 vows.describe('cup').addBatch({
   'a new Cup': {
     topic: new Cup('env'),
     'should have a fully resolved path': function (cup) {
       assert.equal(cup.path, path.resolve('env'));
     },
-    'should have a cupfile path of <path>/Cupfile': function (cup) {
-      assert.equal(cup.cupfilePath, cup.path + '/Cupfile');
+    'without a specfied folder' : {
+      topic: new Cup(),
+      'should have the cwd as its path': function (cup) {
+        assert.equal(path.resolve('.'), cup.path);
+      }
     }
   },
   'load paths': {
@@ -53,12 +59,9 @@ vows.describe('cup').addBatch({
   },
   'when a Cupfile does not exist': {
     topic: macros.testCup2().create(),
-    'cupfile() returns null': function (cup) {
-      assert.strictEqual(cup.cupfile(), null);
-    },
-    'throwIfNoCupfile() throws an error': function (cup) {
+    'cupfile() throws an error': function (cup) {
       assert.throws(function () {
-        cup.throwIfNoCupfile();
+        cup.cupfile();
       }, Error);
     }
   }

@@ -6,14 +6,30 @@ var Cup = require('../../'),
 var testCups = [];
 var removeTestCupsOnExitCalled = false;
 
-function testCup(n, createExtension) {
+function copyFileSync (source, target) {
+  fs.writeFileSync(target, fs.readFileSync(source));
+}
+
+function testCup (n, createExtension) {
   return function () {
     testCups[n] = testCups[n] || (function () {
 
-      var testCup = new Cup(path.resolve('test-cup-' + n + '_' + new Date().getTime()));
+      var name = 'test-cup-' + n + '_' + new Date().getTime();
+
+      var testCup = new Cup(path.resolve(name));
 
       testCup.create = function () {
+
         fs.mkdirSync(this.path, 0744);
+        fs.mkdirSync(this.path + '/vendor', 0744);
+        fs.mkdirSync(this.path + '/spec', 0744);
+        fs.mkdirSync(this.path + '/spec/env', 0744);
+        fs.mkdirSync(this.path + '/spec/visual', 0744);
+        fs.mkdirSync(this.path + '/lib', 0744);
+        fs.mkdirSync(this.path + '/src', 0744);
+        
+        copyFileSync(__dirname + '/cupfile.test_content', this.path + '/cupfile');
+        
         if (createExtension) createExtension.call(this);
         return this;
       }
@@ -28,7 +44,15 @@ function testCup(n, createExtension) {
 
     return testCups[n];
   }
-} 
+}
+
+function removeTestCups () {
+  testCups.forEach(function (testCup) {
+    if (path.existsSync(testCup.path)) {
+      testCup.remove();
+    }
+  });
+}
 
 exports = module.exports = {
   removeTestCupsOnExit: function () {
@@ -38,18 +62,9 @@ exports = module.exports = {
     process.on('uncaughtException', removeTestCups);
     return this;
   },
+  copyFileSync: copyFileSync,
   testCup1: testCup(1, function () {
-    fs.writeFileSync(this.path + '/Cupfile', fs.readFileSync('./test/support/cupfile.test_content'));
+
   }),
   testCup2: testCup(2)
-}
-
-function removeTestCups() {
-  testCups.forEach(function (testCup) {
-    try {
-      testCup.remove();
-    } catch (e) {
-      if (e.code !== 'ENOENT') throw e;
-    }
-  });
 }

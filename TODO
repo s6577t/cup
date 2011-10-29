@@ -1,0 +1,14 @@
+cup.concatenate
+cup.uglify
+cup.build
+
+
+
+> create a builder
+
+
+> serve a root page and build all javascript
+
+-------
+
+> ordering

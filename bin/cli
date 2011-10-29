@@ -6,7 +6,7 @@ if (!commandName) {
   commandName = 'help';
 }
 
-var commands = require('../lib/commands');
+var commands = require('../').commands;
 
 var command = commands[commandName];
 
@@ -18,14 +18,3 @@ if (!command) {
 var args = process.argv.slice(3);
 
 command.apply(commands, args);
-
-
-
-// if the arguments aren't valid, ERROR!
-
-//console.info("cup cli -> server start;");
-
-//var server = require('../lib/cup').cli.server();
-
-//server.listen(3000);
-//console.log("Express server listening on port %d in %s mode", server.address().port, server.settings.env);;

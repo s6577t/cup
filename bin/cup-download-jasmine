@@ -1,0 +1,17 @@
+#! /usr/bin/env bash
+set -o errexit # exit if it hits the fan
+set -o nounset # using unset variables is an error
+
+cd $1
+
+curl --silent $2 > jasmine.zip
+unzip jasmine.zip -d jasmine
+
+cd jasmine
+
+cp `find . | grep -E '.*\.(css|js)'` ..
+
+cd ..
+
+rm -rf jasmine
+rm jasmine.zip
