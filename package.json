@@ -2,7 +2,7 @@
   "name": "cup",
   "version": "0.0.9",
   "private": true,
-  "main": "./lib/module.js",
+  "main": "./lib/main.js",
   "dependencies": {
     "express": "2.4.7",
     "jade": ">= 0.0.1",

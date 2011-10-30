@@ -59,11 +59,6 @@ vows.describe('cup').addBatch({
   },
   'when a Cupfile does not exist': {
     topic: macros.testCup2().create(),
-    'cupfile() throws an error': function (cup) {
-      assert.throws(function () {
-        cup.cupfile();
-      }, Error);
-    }
   }
 }).export(module);
 
