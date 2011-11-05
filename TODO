@@ -1,8 +1,2 @@
-
-> fix cup build shell status outputs
-
-ERROR page when cupfile can't be read (no template, blank page, cupfile not found run cup validate in the directory you started the server to debug)
--------
-
 > extract state_machine, technicolor, find and shell
 > READMEs! :)
