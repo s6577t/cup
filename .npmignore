@@ -1,2 +1,4 @@
 bin/cup!
 debug/*
+development
+test/eventify

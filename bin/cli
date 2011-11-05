@@ -1,9 +1,25 @@
 #! /usr/bin/env node
+var path = require('path'),
+    fs   = require('fs');
+
+var isCup = path.existsSync('cupfile') && fs.statSync('cupfile').isFile();
+
+if (isCup) {
+  commandName = 'server'
+} else {
+  commandName = 'help';
+}
 
 var commandName = process.argv[2];
+var args = args = process.argv.slice(3);
 
-if (!commandName) {
-  commandName = 'help';
+if (!commandName || commandName.match(/^\d{4,5}$/)) {
+  if (isCup) {
+    commandName = 'server';
+    args = process.argv.slice(2);
+  } else {
+    commandName = 'help';
+  }
 }
 
 var commands = require('../').commands;
@@ -14,7 +30,5 @@ if (!command) {
   console.error("'" + command + "' is not a valid command.");
   command = commands['help'];
 }
-
-var args = process.argv.slice(3);
 
 command.apply(commands, args);

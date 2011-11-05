@@ -1,0 +1,41 @@
+#root_index
+
+  #info
+    h1 #{name} #{version}
+    section
+      table(cellpadding='0', cellspacing='0')
+        tr
+          td.label.path path:
+          td.value.path= path
+        tr
+          td.label.files file count:
+          td.value.files
+            span.total= libCount + srcCount
+            span.components
+              = " ("
+              a(href='/lib') lib
+              span.count : #{libCount + ', '}
+              a(href='/src') src
+              span.count : #{srcCount}
+              | )
+        tr
+          td.label.concatenated concatenated:
+          td.value.concatenated
+            div.path
+              a(href='/concatenated')= buildResult.concatenate.path
+            div.size #{buildResult.concatenate.size} bytes
+        tr
+          td.label.minified minified:
+          td.value.minified
+            div.path
+              a(href='/uglified')= buildResult.uglify.path
+            div.size
+              span #{buildResult.uglify.size} bytes
+              div.percentage #{buildResult.uglify.percentage} of concatenated size
+
+
+  #file_list
+    ul.file-list
+      - for file in ls
+        li
+          a(href=file)= file

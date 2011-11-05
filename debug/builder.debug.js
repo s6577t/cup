@@ -4,4 +4,9 @@ var Cup     = require('../'),
 var cup = new Cup('./test/eventify');
 var builder = new Builder(cup);
 
-console.info(builder.build());
+var r = builder.build();
+
+delete r.uglify['output'];
+delete r.concatenate['output'];
+
+console.info(r);

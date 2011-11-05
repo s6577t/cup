@@ -1,0 +1,13 @@
+!!!
+html
+  head
+    title= name
+
+    - javascripts.forEach(function (javascript) {
+      script(src=javascript, type='text/javascript')
+    - })
+
+  - if (typeof jade === 'undefined')
+    body
+  - else
+    body!= jade

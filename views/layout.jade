@@ -1,6 +1,37 @@
 !!!
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+    title= name
+
+    link(rel="stylesheet", type="text/css", href="/cup.css")
+    - stylesheets.forEach(function (stylesheet) {
+      link(rel="stylesheet", type="text/css", href=stylesheet)
+    - })
+
+    script(type="application/javascript", src="/cup.js")
+    - javascripts.forEach(function (javascript) {
+      script(src=javascript, type='text/javascript')
+    - })
+
+  body
+    #cup_header
+
+      nav
+        ul
+          li
+            a(href='/') #{name} v#{version}
+          li
+            a(href='/debug') debug
+          li
+            a(href='/empty') empty
+          li
+            span spec:
+            a(href='/spec') src
+            a(href='/spec/concatenated') concatenated
+            a(href='/spec/uglified') uglified
+            a(href='/spec/visual') visual
+
+      a#cup_version(href='https://github.com/sjltaylor/cup', target='blank') cup v#{versionOfCup}
+        
+      
+    #page!= body

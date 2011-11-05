@@ -1,16 +1,8 @@
-cup.concatenate
-cup.uglify
-cup.build
 
+> fix cup build shell status outputs
 
-
-> create a builder
-
-
-> serve a root page and build all javascript
-
+ERROR page when cupfile can't be read (no template, blank page, cupfile not found run cup validate in the directory you started the server to debug)
 -------
 
-> ordering
-
-> extract state_machine
+> extract state_machine, technicolor, find and shell
+> READMEs! :)

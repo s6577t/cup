@@ -1,0 +1,13 @@
+#visuals
+  
+  h1 Visual Specs
+  
+  section#listing
+  
+    div.count count: #{visuals}
+
+    ul
+      - for(var visual in visuals)
+        li
+          input(type='checkbox')
+          a.name(href='/spec/visual/'+visual, target='blank')= visual

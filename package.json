@@ -1,14 +1,18 @@
 {
-  "name": "cup",
-  "version": "0.0.9",
-  "private": true,
-  "main": "./lib/main.js",
+  "name"    : "cup",
+  "version" : "0.0.9",
+  "private" : true,
+  "main"    : "./lib/main.js",
   "dependencies": {
-    "express": "2.4.7",
-    "jade": ">= 0.0.1",
-    "uglify-js": ">= 1.1.1",
-    "wrench": ">= 0.0.1",
-    "semver": ">= 0.0.1"
+    "express"   : "2.4.7",
+    "connect"   : ">=0.0.1",
+    "jade"      : ">= 0.0.1",
+    "uglify-js" : ">= 1.1.1",
+    "wrench"    : ">= 0.0.1",
+    "semver"    : ">= 0.0.1",
+    "stylus"    : ">= 0.0.1",
+    "jade"      : ">= 0.0.1"
+
   },
   "devDependencies": {
     "vows": ">= 0.5.12"
