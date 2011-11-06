@@ -3,3 +3,4 @@ bin/cup!
 debug/**
 development
 test/eventify/**
+_cup_rb/**
