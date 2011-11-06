@@ -43,10 +43,11 @@ section
         a
           display: inline-block
           text-decoration: none
+          margin: 0 3px
           padding: 3px
           border-top: solid 2px transparent
 
-          &.current, &:hover
+          &:hover, &.current
             border-top-color: black
 
   #cup_version

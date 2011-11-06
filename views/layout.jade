@@ -5,14 +5,14 @@ html
 
     link(rel="stylesheet", type="text/css", href="/cup.css")
     - stylesheets.forEach(function (stylesheet) {
-      link(rel="stylesheet", type="text/css", href=stylesheet)
+        link(rel="stylesheet", type="text/css", href='/' + stylesheet)
     - })
 
-    script(type="application/javascript", src="/cup.js")
     - javascripts.forEach(function (javascript) {
-      script(src=javascript, type='text/javascript')
+        script(src='/' + javascript, type='text/javascript')
     - })
-
+    script(type="application/javascript", src="/cup.js")
+    
   body
     #cup_header
 

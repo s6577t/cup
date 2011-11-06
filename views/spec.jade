@@ -1,4 +1,4 @@
-- if (typeof buildResult === 'undefined' || buildResult.status === 'ok')
+- if ((typeof buildResult === 'undefined') || (buildResult.status === 'ok'))
   #jasmine_container
     script
       jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
