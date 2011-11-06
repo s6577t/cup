@@ -1,6 +1,6 @@
 # Cup
 
-INSERT A PICTURE OF A CUP
+![](https://raw.github.com/sjltaylor/cup/master/cup.png)
 
 Command lines tools and a web application to help in developing javascript libraries and applications independently of anything else.
 
