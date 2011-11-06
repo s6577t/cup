@@ -1,18 +1,17 @@
 {
   "name"    : "cup",
-  "version" : "0.0.9",
-  "private" : true,
+  "version" : "0.1.0",
   "main"    : "./lib/main.js",
   "dependencies": {
-    "express"   : "2.4.7",
+    "express"   : ">= 2.4.7",
     "connect"   : ">=0.0.1",
     "jade"      : ">= 0.0.1",
     "uglify-js" : ">= 1.1.1",
-    "wrench"    : ">= 0.0.1",
     "semver"    : ">= 0.0.1",
     "stylus"    : ">= 0.0.1",
-    "jade"      : ">= 0.0.1"
-
+    "jade"      : ">= 0.0.1",
+    "technicolor": ">= 0.1.1",
+    "wrench"    : ">= 0.0.1"
   },
   "devDependencies": {
     "vows": ">= 0.5.12"

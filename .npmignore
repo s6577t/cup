@@ -1,4 +1,5 @@
+TODO
 bin/cup!
-debug/*
+debug/**
 development
-test/eventify
+test/eventify/**

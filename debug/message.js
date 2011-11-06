@@ -1,4 +1,4 @@
-var technicolor = require('../lib/technicolor')
+var technicolor = require('technicolor')
 
 message = function (message) {
   var message = " " + 'status' + "\t" + message;
