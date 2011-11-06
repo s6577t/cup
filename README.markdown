@@ -4,12 +4,6 @@ Written in javascript, for developing javascript.
 
 ![](https://raw.github.com/sjltaylor/cup/master/cup.png)
 
-Why
-
-* Run jasmine specs on source and uglified output
-* Manage script load order dependency
-*
-
 # Install
 
 `npm install cup -g`
