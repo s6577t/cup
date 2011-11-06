@@ -1,8 +1,14 @@
 # Cup
 
+Written in javascript, for developing javascript.
+
 ![](https://raw.github.com/sjltaylor/cup/master/cup.png)
 
-Command lines tools and a web application to help in developing javascript libraries and applications independently of anything else.
+Why
+
+* Run jasmine specs on source and uglified output
+* Manage script load order dependency
+*
 
 # Install
 
@@ -34,13 +40,13 @@ Output from `cup help`:
      check the status of the cupfile
 
     concatenate
-     concatenates lib and src files in the order specified by the cupfile
+     concatenates lib and src files in the order specified by the cupfile, print the result to stdout
 
     uglify
-     uglifies the concatenation
+     uglifies the concatenation, print the result to stdout
 
     build
-     uglify and concatenate into the build directory
+     uglify and concatenate into the build directory running any before/after build hooks specified in the cupfile
 
 
 ### The create Command

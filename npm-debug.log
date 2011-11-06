@@ -1,0 +1,49 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'version', '0.1.1' ]
+info using npm@1.0.104
+info using node@v0.6.0
+verbose config file /Users/sjltaylor/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /usr/local/lib/node_modules/npm/npmrc
+silly testEngine { name: 'cup',
+silly testEngine   version: '0.1.1',
+silly testEngine   main: './lib/main.js',
+silly testEngine   dependencies: 
+silly testEngine    { express: '>= 2.4.7',
+silly testEngine      connect: '>=0.0.1',
+silly testEngine      jade: '>= 0.0.1',
+silly testEngine      'uglify-js': '>= 1.1.1',
+silly testEngine      semver: '>= 0.0.1',
+silly testEngine      stylus: '>= 0.0.1',
+silly testEngine      technicolor: '>= 0.1.1',
+silly testEngine      wrench: '>= 0.0.1' },
+silly testEngine   devDependencies: { vows: '>= 0.5.12' },
+silly testEngine   bin: { cup: './bin/cli' },
+silly testEngine   engines: { node: '*' } }
+verbose caching /Users/sjltaylor/Dropbox/sjltaylor/cup/package.json
+verbose loadDefaults cup@0.1.0
+silly exec git "status" "--porcelain"
+silly spawning [ 'git', [ 'status', '--porcelain' ], null ]
+ERR! Error: Git working directory not clean.
+ERR! M README.markdown
+ERR!  M TODO
+ERR!  M lib/commands.js
+ERR!     at /usr/local/lib/node_modules/npm/lib/version.js:48:33
+ERR!     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/exec.js:54:5)
+ERR!     at ChildProcess.emit (events.js:70:17)
+ERR!     at maybeExit (child_process.js:359:16)
+ERR!     at Socket.<anonymous> (child_process.js:456:7)
+ERR!     at Socket.emit (events.js:67:17)
+ERR!     at Array.0 (net.js:300:10)
+ERR!     at EventEmitter._tickCallback (node.js:192:40)
+ERR! Report this *entire* log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Darwin 10.8.0
+ERR! command "node" "/usr/local/bin/npm" "version" "0.1.1"
+ERR! cwd /Users/sjltaylor/Dropbox/sjltaylor/cup
+ERR! node -v v0.6.0
+ERR! npm -v 1.0.104
+verbose exit [ 1, true ]
