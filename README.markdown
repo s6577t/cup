@@ -1,6 +1,6 @@
 # Cup
 
-Written in javascript, for developing javascript.
+A javascript development harness written in javascript.
 
 ![](https://raw.github.com/sjltaylor/cup/master/cup.png)
 
