@@ -3,8 +3,12 @@ html
   head
     title= name
 
+    - stylesheets.forEach(function (stylesheet) {
+        link(rel="stylesheet", type="text/css", href='/' + stylesheet)
+    - })
+
     - javascripts.forEach(function (javascript) {
-      script(src=javascript, type='text/javascript')
+      script(src='/' + javascript, type='text/javascript')
     - })
 
   - if (typeof jade === 'undefined')

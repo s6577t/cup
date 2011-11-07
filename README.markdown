@@ -21,7 +21,7 @@ Assuming you have node >=0.6.0 and npm installed:
 
 Output from `cup help`:
 
-    help
+    help 
      you're looking at it, this is the default command in a directory without a cupfile
 
     server port=1212
@@ -30,26 +30,29 @@ Output from `cup help`:
     create name
      setup a cup folder structure
 
-    version
+    version 
      shows the version of cup and the version of this cup if there is one
 
     javascripts *[vendor|spec|lib|src]
      list all javascripts in the current cup in the correct order as defined by the cupfile
 
     scheme scheme
-     list javascripts for the specified scheme
+     list javascripts for the specified scheme.
 
-    validate
+    validate 
      check the status of the cupfile
 
-    concatenate
+    concatenate 
      concatenates lib and src files in the order specified by the cupfile, print the result to stdout
 
-    uglify
+    uglify 
      uglifies the concatenation, print the result to stdout
 
-    build
+    build 
      uglify and concatenate into the build directory running any before/after build hooks specified in the cupfile
+
+    visuals 
+     list visual specs to stdout
 
 
 ### The create Command
