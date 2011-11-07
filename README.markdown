@@ -4,7 +4,16 @@ A javascript development harness written in javascript.
 
 ![](https://raw.github.com/sjltaylor/cup/master/cup.png)
 
+Helps with:
+
+* Running javascirpt specs
+* UI component testing
+* Script ordering
+* Minification & Uglification
+
 # Install
+
+Assuming you have node >=0.6.0 and npm installed:
 
 `npm install cup -g`
 
