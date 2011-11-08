@@ -1,0 +1,13 @@
+style
+  body {
+    font-family: 'Arial';
+  }
+
+p When the link is clicked it disappears
+
+a#thelink(href='javascript:') the link
+
+script
+  $('#thelink').click(function () {
+    $(this).remove();
+  })
