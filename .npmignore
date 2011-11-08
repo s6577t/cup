@@ -5,3 +5,4 @@ development
 test/eventify/**
 _cup_rb/**
 npm-debug.log
+demo/**
