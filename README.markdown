@@ -6,10 +6,10 @@ A javascript development harness written in javascript.
 
 Helps with:
 
-* Running javascirpt specs
+* Running javascript specs
 * UI component testing
 * Script ordering
-* Minification & Uglification
+* Uglification
 
 # Install
 
