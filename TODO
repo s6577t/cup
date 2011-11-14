@@ -1,0 +1,4 @@
+* specify load paths in javascript: ['spec', 'vendor', 'lib', 'src']
+* load from arbitrary paths
+* specify build input paths in cupfile
+* defaults to ['lib', 'src']
