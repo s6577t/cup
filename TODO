@@ -2,3 +2,5 @@
 * load from arbitrary paths
 * specify build input paths in cupfile
 * defaults to ['lib', 'src']
+
+> lookout for the new jasmine HTMLReporter maybe in a new version of jasmine? Current jasmine version is 1.1 as of Wed Nov 16 00:47:32 GMT 2011
